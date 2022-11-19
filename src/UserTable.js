@@ -2,6 +2,16 @@ import { Component } from "react";
 
 export default class UserTable extends Component {
     render() {
+        const userList = this.props.userList;
+        const userListTemplate = [];
+        for (let i = 0; i < userList.length; i++) {
+            userListTemplate.push(
+                <tr>
+                    <th scope="row">{i}</th>
+                    <td>{userList[i]}</td>
+                </tr>
+            );
+        }
         return (
             <table class="table table-condensed">
                 <thead>
@@ -10,20 +20,7 @@ export default class UserTable extends Component {
                         <th>First Name</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                    </tr>
-                </tbody>
+                <tbody>{userListTemplate}</tbody>
             </table>
         );
     }
