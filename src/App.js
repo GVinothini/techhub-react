@@ -21,25 +21,25 @@ class App extends Component {
     render() {
         let buttonClasses = `btn ${this.props.buttonTheme}`;
         return (
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3">
-                        <div class="row">
-                            <div class="col-xs-12">
+            <div className="container">
+                <div className="row">
+                    <div className="col-xs-6 col-xs-offset-3">
+                        <div className="row">
+                            <div className="col-xs-12">
                                 <UserTable userList={this.props.userList} />
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
+                        <div className="row">
+                            <div className="col-xs-12">
                                 <form
-                                    class="form-inline"
+                                    className="form-inline"
                                     onSubmit={this.handleSubmit}
                                 >
-                                    <div class="form-group">
-                                        <label for="InputName1">Name</label>
+                                    <div className="form-group">
+                                        <label htmlFor="InputName1">Name</label>
                                         <input
                                             type="text"
-                                            class="form-control"
+                                            className="form-control"
                                             id="InputName1"
                                             name="InputName"
                                             placeholder="Jane Doe"
