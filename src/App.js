@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Component } from "react";
-import UserTable from "./UserTable";
+import UserTable from "./UserTableWithDelete";
 import { connect } from "react-redux";
 
 class App extends Component {
@@ -26,7 +25,10 @@ class App extends Component {
                     <div className="col-xs-6 col-xs-offset-3">
                         <div className="row">
                             <div className="col-xs-12">
-                                <UserTable userList={this.props.userList} />
+                                <UserTable
+                                userList={this.props.userList}
+                                deleteUser={this.props.deleteUser}
+                                />
                             </div>
                         </div>
                         <div className="row">
@@ -74,6 +76,11 @@ const mapDispatchToProps = (dispatch) => ({
             type: "ADD_USER",
             payload: userName,
         }),
+    deleteUser: (userId) => 
+        dispatch({
+            type:"DELETE_USER",
+            payload: userId
+        })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render app 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-xs-6 col-xs-offset-3"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-xs-12"
+          >
+            <div>
+              Table
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col-xs-12"
+          >
+            <form
+              class="form-inline"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  for="InputName1"
+                >
+                  Name
+                </label>
+                <input
+                  class="form-control"
+                  id="InputName1"
+                  name="InputName"
+                  placeholder="Jane Doe"
+                  type="text"
+                />
+              </div>
+              <button
+                class="btn undefined"
+                type="submit"
+              >
+                Save
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
